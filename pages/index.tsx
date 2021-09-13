@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-         <h1> Fresh start: Portfolia v_2 </h1>
+         <h1 className='text-color-orange'> Fresh start: Portfolia v_2 </h1>
  
       </main>
 
