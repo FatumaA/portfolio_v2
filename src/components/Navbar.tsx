@@ -1,4 +1,4 @@
-// import logo from '../logo.png'
+
 // import {BrowserRouter as Router} from 'react-router-dom'
 
 import Link from 'next/link'
@@ -14,7 +14,7 @@ const Navbar = () => {
                 </a> */}
 
           <ul> 
-              <Link href='#home'>
+              <Link href='/#home'>
                 <a className="nav-links">
                   <li >
                   Home 
@@ -22,7 +22,7 @@ const Navbar = () => {
                 </a>
                </Link>
 
-               <Link href='#about'>
+               <Link href='/#about'>
                 <a className="nav-links">
                   <li >
                   About
@@ -30,7 +30,7 @@ const Navbar = () => {
                 </a>
                </Link>
 
-                 <Link href={'#projects'}>
+                 <Link href='/#projects'>
                 <a className="nav-links">
                   <li >
                   Projects 
@@ -38,13 +38,30 @@ const Navbar = () => {
                 </a>
                </Link>
 
-               <Link href='#contacts'>
+               <Link href='/videos'>
+                <a className="nav-links">
+                  <li >
+                  Videos
+                  </li> 
+                </a>
+               </Link> 
+
+               
+               <Link href='/blog'>
+                <a className="nav-links">
+                  <li >
+                  Blog
+                  </li> 
+                </a>
+               </Link>  
+
+               <Link href='/#contact'>
                 <a className="nav-links">
                   <li >
                   Contacts 
                   </li> 
                 </a>
-               </Link>  
+               </Link>   
                    
           </ul>
            

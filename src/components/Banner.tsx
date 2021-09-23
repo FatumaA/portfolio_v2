@@ -1,32 +1,33 @@
 import React from 'react'
 import { BannerInfo } from './Data'
-import Image from 'next/link'
+import Image from 'next/image'
 
 const Banner = () => {
   return (
     <div>
       <div className="grid-banner">
+
       <div className="banner-wrapper-image">
-      <Image src={BannerInfo.html} alt='hero' layout="fill"/>
+      <Image src={BannerInfo.html} alt='hero' width={120} height={200}/>
       </div>
 
       <div className="banner-wrapper-image">
-      <Image src={BannerInfo.css} alt='hero' layout="fill"/>
+      <Image src={BannerInfo.css} alt='hero' width={120} height={200}/>
       </div>
 
       <div className="banner-wrapper-image">
-      <Image src={BannerInfo.react} alt='hero' layout="fill"/>
+      <Image src={BannerInfo.react} alt='hero' width={120} height={200}/>
       </div>
 
       <div className="banner-wrapper-image">
-      <Image src={BannerInfo.javascript} alt='hero'/>
+      <Image src={BannerInfo.javascript} alt='hero' width={120} height={200}/>
       </div>
 
       <div className="banner-wrapper-image">
-      <Image src={BannerInfo.sass} alt='hero' layout="fill"/>
-      </div>
+      <Image src={BannerInfo.sass} alt='hero' width={120} height={200} />
       </div>
     </div>
+      </div>
   )
 }
 

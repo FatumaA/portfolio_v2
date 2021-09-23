@@ -9,11 +9,11 @@ const Projects = () => {
       <h5>{ProjectsInfo.tagLine}</h5>
       <h1>{ProjectsInfo.headLine}</h1>
       
-      <div className="styles.hero-section">
+      <div className="hero-section">
         
         <div className="card">
           <Link href='https://peaceful-raman-a2c62f.netlify.app/'>
-            <a alt='screenshot' target='_blank' rel='noreferrer'>
+            <a target='_blank' rel='noreferrer'>
             <Image src={ScreenshotsInfo.medic} alt='screenshot' layout="fill"/>
             </a>
           </Link>
@@ -26,7 +26,7 @@ const Projects = () => {
         
         <div className="card">
           <Link href='https://www.shedevelops.dev/'>
-            <a alt='screenshot' target='_blank' rel='noreferrer'>
+            <a target='_blank' rel='noreferrer'>
             <Image src={ScreenshotsInfo.folio} alt='screenshot' layout="fill"/>
             </a>
           </Link>

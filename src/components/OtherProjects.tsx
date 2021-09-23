@@ -13,7 +13,7 @@ const OtherProjects = () => {
         
         <div className="card">
           <Link href='https://thegrindcafe.co.ke/'>
-            <a alt='screenshot' target='_blank' rel='noreferrer'>
+            <a target='_blank' rel='noreferrer'>
             <Image src={ScreenshotsInfo.grind} alt='screenshot' layout="fill"/>
             </a>
           </Link>
@@ -29,7 +29,7 @@ const OtherProjects = () => {
         
         <div className="card">
           <Link href='https://motionauto.co.ke/'>
-            <a alt='screenshot' target='_blank' rel='noreferrer'>
+            <a target='_blank' rel='noreferrer'>
             <Image src={ScreenshotsInfo.motion} alt='screenshot' layout="fill"/>
             </a>
           </Link>

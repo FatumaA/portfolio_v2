@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import logo from '../logo.png'
-import { GoThreeBars, GoX } from 'react-icons/go';
+// import logo from '../logo.png'
+// import { GoThreeBars, GoX } from 'react-icons/go';
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { BrowserRouter as Router } from 'react-router-dom'
+// import { BrowserRouter as Router } from 'react-router-dom'
 
 const MobileNav = () => {
 
@@ -17,11 +17,11 @@ const MobileNav = () => {
   
   return (
     <>
-    <Router>
+    {/* <Router> */}
     <nav className="nav-background">
                 <Link href='/'>
-                  <a alt='logo'> 
-                  <Image src={logo} alt='logo'className='logo' layout="fill"/>
+                  <a> 
+                  {/* <Image src={logo} alt='logo'className='logo' layout="fill"/> */}
                   </a>
                 </Link>
                
@@ -60,11 +60,11 @@ const MobileNav = () => {
                </Link>
           </ul>
 
-            <GoThreeBars className="menu-icon" style={{opacity:click ? "0" :  "1"}} onClick={onClick}/>
-            <GoX className="menu-icon-close"  style={{opacity:click ? "1" :  "0"}} onClick={onClick} />
+            {/* <GoThreeBars className="menu-icon" style={{opacity:click ? "0" :  "1"}} onClick={onClick}/> */}
+            {/* <GoX className="menu-icon-close"  style={{opacity:click ? "1" :  "0"}} onClick={onClick} /> */}
         </nav> 
 
-        </Router>
+        {/* </Router> */}
     
     </>
   )

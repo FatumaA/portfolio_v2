@@ -77,7 +77,7 @@ const Contact = () => {
                </div> */}
                <br/>
       <label htmlFor='Message'>Message:</label>
-      <textarea  rows='20' name='message' 
+      <textarea  rows={20} name='message' 
       required
       // onChange={handleChange} 
       // ref={register({
