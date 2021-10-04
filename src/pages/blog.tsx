@@ -1,9 +1,11 @@
 import React from 'react'
+import Button from '../components/Button'
 
 const blog = () => {
     return (
-        <div>
+        <div className="bg-white">
             <h1> Hello Blogs </h1>
+
         </div>
     )
 }
