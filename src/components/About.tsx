@@ -1,34 +1,23 @@
-import React from 'react'
-import { AboutInfo, ButtonInfo } from './Data'
 import Link from 'next/link'
-import Image from 'next/image'
+import React from 'react'
+import Button from './Button'
+import { AboutInfo, ButtonInfo } from './Data'
 
 const About = () => {
-  return (
-    <div id='about' className="about-main-container"> 
-      <div className="hero-section">
-      <div className="hero-wrapper-text">
-      <h5>{AboutInfo.tagLine}</h5>
-      <h1>{AboutInfo.headLine}</h1>
-      <p>{AboutInfo.subHeadLine}</p>
+    return (
+        <div id="about" className='text-white flex flex-col items-center justify-center my-20'>
+            <h5 className="tagline">{AboutInfo.tagLine}</h5>
+            <h1 className="headline">{AboutInfo.headLine}</h1>
+            <p className="text-center leading-7">{AboutInfo.subHeadLine}</p>
+        
+            <Link href='/#about'>
+                <a> 
+                <Button btnText={ButtonInfo.about}/>
+                </a> 
+            </Link>
 
-      <Link href='/#contact'>
-      <a> 
-      <button className='btn-primary'>
-        {ButtonInfo.about}
-      </button>
-      </a>
-      </Link>
-      </div>
-
-      <div className='hero-wrapper-image'>
-      <Image src={AboutInfo.Img} alt='hero' layout="fill" />
-      </div>
-      </div>
-
-     
-    </div>
-  )
+        </div>
+    )
 }
 
 export default About

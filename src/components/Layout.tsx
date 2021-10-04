@@ -1,8 +1,10 @@
 import React, { ReactNode } from 'react'
-
 import Footer from './Footer';
 import Navbar from './Navbar';
-import MobileNav from './MobileNav';
+
+// import Footer from './Footer';
+// import Navbar from './Navbar';
+// import MobileNav from './MobileNav';
 
 type Props = {
     children?: ReactNode

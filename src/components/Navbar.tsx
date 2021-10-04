@@ -1,76 +1,37 @@
-
-// import {BrowserRouter as Router} from 'react-router-dom'
-
+import React from 'react'
 import Link from 'next/link'
-
 const Navbar = () => {
-  
-  return (
-    <>
-    {/* <Router> */}
-    <nav className='nav-background'>
-                {/* <a href='/' alt='logo'> 
-                <img src={logo} alt='logo'className='logo'/>
-                </a> */}
-
-          <ul> 
-              <Link href='/#home'>
-                <a className="nav-links">
-                  <li >
-                  Home 
-                  </li> 
-                </a>
-               </Link>
-
-               <Link href='/#about'>
-                <a className="nav-links">
-                  <li >
-                  About
-                  </li> 
-                </a>
-               </Link>
-
-                 <Link href='/#projects'>
-                <a className="nav-links">
-                  <li >
-                  Projects 
-                  </li> 
-                </a>
-               </Link>
-
-               <Link href='/videos'>
-                <a className="nav-links">
-                  <li >
-                  Videos
-                  </li> 
-                </a>
-               </Link> 
-
-               
-               <Link href='/blog'>
-                <a className="nav-links">
-                  <li >
-                  Blog
-                  </li> 
-                </a>
-               </Link>  
-
-               <Link href='/#contact'>
-                <a className="nav-links">
-                  <li >
-                  Contacts 
-                  </li> 
-                </a>
-               </Link>   
-                   
-          </ul>
-           
-        </nav> 
-
-        {/* </Router> */}
-    
-    </>
-  )
+    return (
+        <div className="text-purple-500 font-bold flex justify-between mx-24 top-0 sticky pt-4 pb-4 z-10">
+            <div className="hover:text-purple-400">
+                <Link href={'/'}>
+                  <a>LOGO</a>
+                </Link>
+            </div>
+            <div className="space-x-4">
+            <Link href={'/#home'}>
+                <a className="hover:text-purple-400">HOME</a>
+            </Link>
+            <Link href={'/#about'}>
+                <a className="hover:text-purple-400">ABOUT</a>
+            </Link>
+            <Link href={'/#projects'}>
+                <a className="hover:text-purple-400">PROJECTS</a>
+            </Link>
+            <Link href={'/blog'}>
+                <a className="hover:text-purple-400">BLOG</a>
+            </Link>
+            <Link href={'/videos'}>
+                <a className="hover:text-purple-400">VIDEOS</a>
+            </Link>
+            <Link href={'/#contacts'}>
+                <a className="hover:text-purple-400">CONTACTS</a>
+            </Link>
+            </div>
+            
+            
+        </div>
+    )
 }
 
 export default Navbar
