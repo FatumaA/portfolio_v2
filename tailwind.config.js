@@ -8,19 +8,19 @@ module.exports = {
       colors: {
         bgColor: {
           light: '#F4F4F4',
-          dark: '#222'
+          dark: '#29292F',
+          cardLight: '',
+          cardDark: '#39394B'
         },
         brand: {
-          primary: '#55266F',
-          hover: '#6B4FC4',
+          lighter: '#AFACF7',
+          primary: '#7068CB',
+          primaryDark: '',
+          hover: '#343250',
+          hoverDark: '#5D5D88',
           accent: '#c7c734',
-          accentGreen: '#41B09C',
-          accentOrange: '#E18888'
+          accentDark: ''
         },
-        textColor: {
-          light: '#fff',
-          dark: '#222'
-        }
       },
       text: {
         light: '#fff'

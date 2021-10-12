@@ -10,7 +10,7 @@ type props = {
 const Button = ({btnText, icon}: props) => {
     return (
         // <div>
-            <button className="btn-primary">
+            <button className="btn-primary content-center">
                 <div>{btnText}</div>
                 <div>{icon}</div>
             </button>

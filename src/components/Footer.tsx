@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className="text-purple-500 text-center font-bold  mx-24 top-0 sticky pt-4 pb-4">
+        <div className="text-brand-lighter text-center font-bold  mx-24 top-0 sticky pt-4 pb-4">
             <h3>Delicately crafted by: <span>
                 <Link href="https://twitter.com/XquisiteDreamer">
                     <a target='_blank' rel='noreferrer'>Fatuma A - HijabiCoder</a>

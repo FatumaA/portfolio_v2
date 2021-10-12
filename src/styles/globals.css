@@ -7,22 +7,25 @@ html {
   @apply bg-bgColor-dark;
 }
 @layer components {
+  .top-styles {
+    @apply text-gray-300 text-lg lg:text-xl  font-semibold flex flex-col items-center justify-center my-20;
+  }
   .btn-primary {
-    @apply bg-brand-primary py-1.5 px-3 border-none hover:bg-brand-hover 
-           text-white text-sm inline-flex space-x-2 items-center rounded-md
-           my-6;
+    @apply bg-brand-primary py-1.5 px-3 border-none hover:bg-brand-hoverDark
+           text-white text-sm lg:text-lg inline-flex space-x-2 items-center rounded-md
+           my-6 font-bold;
   }
   .card-section {
     @apply grid grid-cols-3 gap-4;
   }
   .card {
-    @apply bg-gray-800 text-white p-6 shadow-sm rounded-sm hover:bg-gray-600;
+    @apply bg-bgColor-cardDark text-gray-300 text-lg lg:text-xl font-semibold p-6 shadow-sm rounded-sm hover:bg-brand-hoverDark;
   }
   .tagline {
-    @apply text-white text-center mb-4 tracking-widest font-extralight;
+    @apply text-gray-100 text-center mb-4 tracking-widest font-extralight border-b-4 border-brand-accent;
   }
   .headline {
-    @apply text-white text-center mb-6 font-semibold;
+    @apply text-white text-center mb-6 font-bold;
   }
 
 }

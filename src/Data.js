@@ -77,14 +77,16 @@ export const ContactInfo = {
   Img: '/images/contact.png'
 }
 
-export const BannerInfo = {
-  html: '/images/html5.png',
-  css: '/images/CSS3.png',
-  react: '/images/react.png',
-  sass: '/images/sass.png',
-  javascript: '/images/javaScript.png'
-  
-}
+export const BannerInfo = [
+  '/images/angular.png',
+  '/images/react-trans.png',
+  '/images/sass.png',
+  '/images/basics.png',
+  '/images/flutter.png',
+  '/images/firebase.png',
+  '/images/mat-design.png',
+  '/images/tailwind.png',
+]
 
 export const ScreenshotsInfo = {
   folio: '/images/screenshotFolio.png',
