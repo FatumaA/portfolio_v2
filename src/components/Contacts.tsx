@@ -10,7 +10,7 @@ const Contacts = () => {
 
             <p className="text-center leading-7">{ContactInfo.subHeadLine}</p>
 
-            <form name='contact' action='/contact' method='POST'className="flex flex-col w-full text-center my-6" >
+            <form name='contact' action='/contact' method='POST' className="flex flex-col w-11/12 text-center my-6">
                 <input type='hidden' name='form-name' value='contact'/>
 
                 <label htmlFor='Name' className="mb-1">Name:</label>

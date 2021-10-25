@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@font-face {
+  font-family: "Custom";
+  src: url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+}
+
 html {
   scroll-behavior: smooth;
   @apply bg-bgColor-dark;
@@ -16,7 +22,7 @@ html {
            my-6 font-bold;
   }
   .card-section {
-    @apply grid grid-cols-3 gap-4;
+    @apply grid grid-flow-col grid-cols-3 gap-4;
   }
   .card {
     @apply bg-bgColor-cardDark text-gray-300 text-lg lg:text-xl font-semibold p-6 shadow-sm rounded-sm hover:bg-brand-hoverDark;
