@@ -1,7 +1,7 @@
 export const HeroInfo ={
   tagLine: 'HEY THERE',
   headLine: 'Creating user experiences that are to die for',
-  subHeadLine: "I'm a front-end developer that translates business problems and backend requirements into easy-to-use yet elegant User Interfaces I'm a front-end developer that translates business problems and backend requirements into easy-to-use yet elegant User Interface I'm a front-end developer that translates business problems and backend requirements into easy-to-use yet elegant User Interface I'm a front-end developer that translates business problems and backend requirements into easy-to-use yet elegant User InterfaceI'm a front-end developer that translates business problems and backend requirements into easy-to-use yet elegant User Interface",
+  subHeadLine: "I'm a full-stack serverless developer, with a front-end focus, that translates business problems and backend requirements into scalable, easy-to-use elegant User Interfaces that blow your users away while increasing business returns",
   Img:  '/images/hero.png'
 }
 
@@ -26,12 +26,12 @@ export const CodeProjectsInfo = [
     },
     {
       projectImgUrl: 'https://www.hijabicoder.dev/',
-      projImgSrc: '/images/screenshotMedic.png',
+      projImgSrc: '/images/screenshotFolio_v2.png',
       projImgAlt: 'portfolio v_2',
       projStack: 'Built with NextJS, Youtube and Hashnode API',
       projDesc: 'My portfolio version 2 built with create-next-app and hosted on the Netlify platform. It consumes the Youtube API and Hashnode API',
       projTextLink: 'View Source Code',
-      projCodeUrl:  'https://github.com/FatumaA/symptom-checker'
+      projCodeUrl:  'https://github.com/FatumaA/portfolio_v2'
     }
   ]
 
