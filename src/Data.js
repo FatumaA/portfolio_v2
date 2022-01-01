@@ -7,7 +7,7 @@ export const HeroInfo ={
 
 export const CodeProjectsInfo = [
     {
-      projectImgUrl: 'https://peaceful-raman-a2c62f.netlify.app/',
+      projectImgUrl: 'https://www.shedevelops.dev/',
       projImgSrc: '/images/screenshotFolio.png',
       projImgAlt: 'portfolio v_1',
       projStack: 'Built with React and Netlify',
@@ -16,7 +16,7 @@ export const CodeProjectsInfo = [
       projCodeUrl:  'https://github.com/FatumaA/myportfoliosite'
     },
     {
-      projectImgUrl: 'https://www.shedevelops.dev/',
+      projectImgUrl: 'https://peaceful-raman-a2c62f.netlify.app/ ',
       projImgSrc: '/images/screenshotMedic.png',
       projImgAlt: 'apimedic project',
       projStack: 'Built with React and consuming the Apimedic API',

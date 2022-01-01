@@ -17,7 +17,7 @@ const CardSection = () => {
 
             <h5 className="tagline mt-10"> {headAndTagLine.tagLineWP} </h5>
             <h1 className="headline" >{headAndTagLine.headLineWP}</h1>
-            <div className="card-section grid-cols-2">
+            <div className="card-section md:grid-cols-2">
                 {
                     LowCodeProjectsInfo.map((lowCodeProj, index) => (
                         <Card key={index} Proj={lowCodeProj}/>

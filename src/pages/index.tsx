@@ -14,7 +14,7 @@ const Home: NextPage = () => {
  
   
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto w-4/5">
       <Head>
         <title>Hijabi Coder</title>
         <meta name="description" content="Portfolio version 2" />
