@@ -1,4 +1,5 @@
 import React from 'react'
+import {GoThreeBars, GoX} from 'react-icons/go';
 import Button from './Button'
 import { ButtonInfo, ContactInfo } from '../Data'
 
@@ -15,14 +16,14 @@ const Contacts = () => {
 
                 <label htmlFor='Name' className="mb-1">Name:</label>
                 <input className="p-2 rounded-sm" type='text' name='name' placeholder ='Name...' required />
-                    {/* <br/> */}
+
                 <label htmlFor='Email' className="mt-6 mb-1">Email:</label>
                 <input className="p-2 rounded-sm" type='email' name='email' placeholder='Email...' required />
-                    {/* <br/> */}
+  
                 <label htmlFor='Message' className="mt-6 mb-1">Message:</label>
-                <textarea className="rounded-sm" rows={10} name='message' required placeholder='Type your message here...' />
-                    {/* <br/> */}
-                <Button btnText={ButtonInfo.contact} />
+                <textarea className="p-2 rounded-sm" rows={10} name='message' required placeholder='Type your message here...' />
+
+                <Button btnText={ButtonInfo.contact}/>
             </form> 
       </div>
     )

@@ -1,20 +1,16 @@
 import { IconBaseProps } from 'react-icons'
-import { icons } from 'react-icons/lib'
 
 type props = {
     btnText: string;
-    iconText?: string;
     icon?: IconBaseProps;
 }
 
-const Button = ({btnText, icon}: props) => {
+const Button = ( { btnText, icon }: props ) => {
     return (
-        // <div>
-            <button className="btn-primary content-center">
-                <div>{btnText}</div>
-                <div>{icon}</div>
-            </button>
-        /* </div> */
+        <button className="btn-primary flex flex-row justify-center">
+             { icon && <div> {icon} </div> }
+            <div> {btnText} </div>     
+        </button>
     )
 }
 

@@ -18,7 +18,7 @@ html {
   }
   .btn-primary {
     @apply bg-brand-primary py-1.5 px-3 border-none hover:bg-brand-hoverDark
-           text-white text-sm lg:text-lg inline-flex space-x-2 items-center rounded-md
+           text-white text-sm lg:text-lg space-x-2 items-center rounded-md
            my-6 font-bold;
   }
   .card-section {
