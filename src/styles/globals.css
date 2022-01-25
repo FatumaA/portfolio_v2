@@ -14,7 +14,7 @@ html {
 }
 @layer components {
   .top-styles {
-    @apply text-gray-300 text-lg lg:text-xl font-semibold flex flex-col items-center justify-center my-20;
+    @apply text-gray-300 text-lg lg:text-xl font-semibold flex flex-col items-center justify-center my-20 px-4;
   }
   .btn-primary {
     @apply bg-brand-primary py-1.5 px-3 border-none hover:bg-brand-hoverDark
@@ -22,7 +22,7 @@ html {
            my-6 font-bold;
   }
   .card-section {
-    @apply grid md:grid-cols-3 sm:grid-cols-1 gap-4;
+    @apply grid md:grid-cols-3 sm:grid-cols-1 gap-4 w-11/12;
   }
   .card {
     @apply bg-bgColor-cardDark text-gray-300 text-lg lg:text-xl font-semibold p-6 shadow-sm rounded-sm hover:bg-brand-hoverDark;
