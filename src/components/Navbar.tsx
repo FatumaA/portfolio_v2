@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Navbar = () => {
     const [click, setClick] = useState(false);
@@ -18,10 +19,10 @@ const Navbar = () => {
 
     return (
         <>
-        <div id="test" className="text-brand-lighter h-4 font-bold flex justify-between mx-24 top-0 sticky py-4 z-10">
+        <div id="test" className="text-brand-lighter h-4 font-bold flex justify-between items-center mx-24 my-8 sticky z-10">
             <div className="hidden lg:block hover:text-brand-accent">
-                <Link href={'/'}>
-                  <a>LOGO</a>
+                <Link href='/' passHref>
+                  <Image alt="Logo" src="/images/logo.png" width={52} height={52} className="cursor-pointer"></Image>
                 </Link>
             </div>
 
@@ -53,8 +54,8 @@ const Navbar = () => {
          <div className="top-0 h-4 sticky z-10 active:bg-bgColor-cardDark p-4 lg:hidden">
          <div className="text-brand-lighter lg:hidden font-bold flex justify-between mx-24 pb-2 z-10">
          <div className="hover:text-brand-accent">
-                <Link href={'/'}>
-                  <a>LOGO</a>
+                <Link href='/' passHref>
+                    <Image alt="Logo" src="/images/logo.png" width={40} height={40} className="cursor-pointer"></Image>
                 </Link>
             </div>
         <button style={{display:click ? "none" :  "block"}} onClick={handleClick}>click here</button>
