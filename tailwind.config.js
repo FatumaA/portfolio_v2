@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'nunito': ['nunito', 'sans-serif'],
+        'sans': ['nunito', 'sans-serif'],
       },
       colors: {
         bgColor: {
