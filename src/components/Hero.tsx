@@ -10,9 +10,9 @@ const Hero = () => {
         <h1 className="headline">{HeroInfo.headLine}</h1>
         <p className="text-center leading-7">{HeroInfo.subHeadLine}</p>
         
-        <Link href='/#projects'>
+        <Link href='/#projects' passHref>
             <a> 
-            <Button btnText={ButtonInfo.hero}/>
+                <Button btnText={ButtonInfo.hero}/>
             </a> 
         </Link>
        

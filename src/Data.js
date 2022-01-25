@@ -66,14 +66,16 @@ export const headAndTagLine = {
 export const AboutInfo = {
   tagLine: 'ABOUT ME',
   headLine: "Hey there...",
-  subHeadLine: "My name is Fatuma. I live in Kenya. I'm a graduate, a mom, a woman switching to tech. And, ofcourse, I love to code beautiful experiences that meet business goals",
+  subHeadLine: "My name is Fatuma, from Kenya. I'm a MSc. CIS graduate, a mom, a woman who transitioned into tech from a purely business background (including a failed business).\
+               And, of course, I love to code beautiful experiences that meet your business goals while delighting your users. \
+               I also enjoy swimming, reading and creating developer-focused content",
   Img: '/images/about.png'
 }
 
 export const ContactInfo = {
   tagLine: 'CONTACT',
   headLine: "Get in Touch",
-  subHeadLine: "Have a project or a job offer you'd like to discuss? Fill in the form and I'll get right back to you. Or send a direct email: biz@hijabicoder.dev",
+  subHeadLine: "Have a project or a job offer you'd like to discuss? Fill in the form and I'll get right back to you. Or send a direct email to: biz@hijabicoder.dev",
   Img: '/images/contact.png'
 }
 
