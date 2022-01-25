@@ -27,5 +27,4 @@ html {
   .headline {
     @apply text-white text-center mb-6 font-bold;
   }
-
 }
