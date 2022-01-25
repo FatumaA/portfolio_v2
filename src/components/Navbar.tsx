@@ -12,15 +12,15 @@ const Navbar = () => {
 
     return (
         <>
+         {/* Main navigation bar + logo */}
         <div className='hidden md:block sticky top-10 z-10'>
-            <div id="test" className="text-brand-lighter h-4 font-bold flex justify-between items-center mx-24 my-8">
+            <div className="text-brand-lighter h-4 font-bold flex justify-between items-center mx-24 my-8">
                 <div className='hidden md:block'>
                     <Link href='/' passHref>
                     <Image alt="Logo" src="/images/logo.png" width={52} height={52} className="cursor-pointer"></Image>
                     </Link>
                 </div>
 
-                {/* Main navigation bar */}
                 <div className="space-x-4 hidden md:block">
                 <Link href={'/#home'}>
                     <a className="hover:text-brand-accent">HOME</a>
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
      
 
-         {/* Mobile navigation bar */}
+         {/* Mobile navigation bar + logo */}
 
          <div className="top-0 h-4 sticky z-10 active:bg-bgColor-cardDark p-4 md:hidden">
             <div className="text-brand-lighter lg:hidden font-bold flex justify-between items-center mx-5 sticky z-10">
