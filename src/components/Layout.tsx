@@ -1,20 +1,17 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useState } from 'react'
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-// import Footer from './Footer';
-// import Navbar from './Navbar';
-// import MobileNav from './MobileNav';
 
 type Props = {
     children?: ReactNode
 }
 
 const Layout = ({ children }: Props) => {
-
     return (
         <>
-        <Navbar />
+       {/* state <= 660 ? <Navbar /> : <MobileNav /> */}
+       <Navbar />
             { children }
         <Footer />   
         </>
