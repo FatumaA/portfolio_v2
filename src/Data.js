@@ -7,7 +7,7 @@ export const HeroInfo ={
 
 export const CodeProjectsInfo = [
     {
-      projectImgUrl: 'https://www.shedevelops.dev/',
+      projectImgUrl: 'https://shedevelops.netlify.app/',
       projImgSrc: '/images/screenshotFolio.png',
       projImgAlt: 'portfolio v_1',
       projStack: 'Built with React and Netlify',
