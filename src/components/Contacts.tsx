@@ -11,7 +11,7 @@ const Contacts = () => {
 
             <p className="text-center leading-7">{ContactInfo.subHeadLine}</p>
 
-            <form name='contact' action='/#contact' method='POST' className="flex flex-col w-11/12 text-center my-6">
+            <form name='contact' method='POST' action="/success" data-netlify='true' className="flex flex-col w-11/12 text-center my-6">
                 <input type='hidden' name='form-name' value='contact'/>
 
                 <label htmlFor='Name' className="mb-1">Name:</label>
@@ -23,7 +23,7 @@ const Contacts = () => {
                 <label htmlFor='Message' className="mt-6 mb-1">Message:</label>
                 <textarea className="p-2 rounded-sm text-gray-700" rows={10} name='message' required placeholder='Type your message here...' />
 
-                <Button btnText={ButtonInfo.contact}/>
+                <Button type="submit" btnText={ButtonInfo.contact}/>
             </form> 
       </div>
     )
