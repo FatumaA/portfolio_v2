@@ -70,11 +70,11 @@ const Navbar = () => {
                     </Link>
                     {/* <Link href={'/blog'}> */}
                         {/* <a onClick={handleClick} className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark">BLOG</a> */}
-                        <a href="https://blog.hijabicoder.dev/" target='_blank' rel='noreferrer' className="hover:text-brand-accent">BLOG</a>
+                        <a href="https://blog.hijabicoder.dev/" target='_blank' rel='noreferrer' className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark">BLOG</a>
                     {/* </Link> */}
                     {/* <Link href={'/videos'}> */}
                         {/* <a onClick={handleClick} className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark">VIDEOS</a> */}
-                        <a href="https://www.youtube.com/channel/UC2GdvJFxCkQEJCcDZTp-Dmg/videos" target='_blank' rel='noreferrer' className="hover:text-brand-accent">VIDEOS</a>
+                        <a href="https://www.youtube.com/channel/UC2GdvJFxCkQEJCcDZTp-Dmg/videos" target='_blank' rel='noreferrer' className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark">VIDEOS</a>
                     {/* </Link> */}
                     <Link href={'/#contacts'}>
                         <a onClick={handleClick} className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark">CONTACTS</a>
