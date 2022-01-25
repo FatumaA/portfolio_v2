@@ -18,7 +18,7 @@ function Card({Proj}: props ) {
       <div className='card'>
         <a href={Proj.projectImgUrl} target='_blank' rel='noreferrer'>
           <Image src={Proj.projImgSrc} alt='screenshot' width="200" height="80"/> 
-          <h3 className="mt-4"> {Proj.projStack} </h3>
+          <h3 className="my-4 font-extrabold"> {Proj.projStack} </h3>
           <p  className="mt-2 mb-4"> {Proj.projDesc} </p>
           <a href={Proj.projCodeUrl} target='_blank' rel='noreferrer' className="text-yellow-400 hover:scale-50"> 
             {Proj.projTextLink} 
