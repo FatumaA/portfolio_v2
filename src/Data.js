@@ -5,7 +5,37 @@ export const HeroInfo ={
   Img:  '/images/hero.png'
 }
 
-export const CodeProjectsInfo = [
+export const ProfessionalProjectsInfo = [
+    {
+      projectImgUrl: 'https://www.syndic4you.be/en/',
+      projImgSrc: '/images/screenshotS4Y.png',
+      projImgAlt: 'Syndic4You',
+      projStack: 'Built with Typescript, Firebase and Nx tooling',
+      projDesc: 'A startup that helps property owners easily manage their property',
+      projTextLink: 'Visit Site',
+      projCodeUrl:  'https://www.syndic4you.be/en/',
+    },
+    {
+      projectImgUrl: 'https://farmbetter.io/',
+      projImgSrc: '/images/screenshotFB.png',
+      projImgAlt: 'FarmBetter',
+      projStack: 'Built with Typescript, Capacitor, Firebase and Nx tooling',
+      projDesc: 'A startup that helps fight food insecurity by empowering farmers to better cope with climate change',
+      projTextLink: 'Visit Site',
+      projCodeUrl:  'https://farmbetter.io/',
+    },
+    {
+      projectImgUrl: 'https://motionauto.co.ke/',
+      projImgSrc: '/images/screenshotMotion.png',
+      projImgAlt: 'Motion Auto',
+      projStack: 'Built with WordPress for a local mechanic business',
+      projDesc: 'A project to get Motion Auto online in  order to increase local awareness of the business',
+      projTextLink: 'View Site',
+      projCodeUrl: 'https://motionauto.co.ke/'
+    }
+  ]
+
+  export const PersonalProjectsInfo = [
     {
       projectImgUrl: 'https://shedevelops.netlify.app/',
       projImgSrc: '/images/screenshotFolio.png',
@@ -33,34 +63,14 @@ export const CodeProjectsInfo = [
       projTextLink: 'View Source Code',
       projCodeUrl:  'https://github.com/FatumaA/portfolio_v2'
     }
-  ]
-
-export const LowCodeProjectsInfo = [
-    {
-      projectImgUrl: 'https://thegrindcafe.co.ke/',
-      projImgSrc: '/images/screenshotGrind.png',
-      projImgAlt: 'The Grind Cafe',
-      projStack: 'Built with WordPress for a local coffee shop',
-      projDesc: 'A project to assist The Grind Cafe increase visibility amid the corona virus crisis',
-      projTextLink: 'Visit Site',
-      projCodeUrl:  'https://thegrindcafe.co.ke/',
-    },
-    {
-      projectImgUrl: 'https://motionauto.co.ke/',
-      projImgSrc: '/images/screenshotMotion.png',
-      projImgAlt: 'Motion Auto',
-      projStack: 'Built with WordPress for a local mechanic business',
-      projDesc: 'A project to get Motion Auto online in  order to increase local awareness of the business',
-      projTextLink: 'View Site',
-      projCodeUrl: 'https://motionauto.co.ke/'
-    }
+  
   ]
 
 export const headAndTagLine = {
   tagLine: 'FEATURED PROJECTS',
-  tagLineWP: 'OTHER PROJECTS',
-  headLine: 'Projects built primarily with React',
-  headLineWP: 'Projects built primarily with WordPress',
+  tagLinePP: 'PERSONAL PROJECTS',
+  headLine: 'Projects built at work and freelance',
+  headLinePP: 'Projects built for learning and fun',
 }
  
 export const AboutInfo = {
