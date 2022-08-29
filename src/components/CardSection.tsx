@@ -10,7 +10,7 @@ const CardSection = () => {
             <div className="card-section">
                 {
                     ProfessionalProjectsInfo.map((profProj, index) => (
-                        <Card key={index} Proj={profProj}/>
+                        <Card key={index} projs={profProj}/>
                     ))
                 }
             </div>
@@ -20,7 +20,7 @@ const CardSection = () => {
             <div className="card-section">
                 {
                     PersonalProjectsInfo.map((personalProj, index) => (
-                        <Card key={index} Proj={personalProj}/>
+                        <Card key={index} projs={personalProj}/>
                     ))
                 }
             </div>
