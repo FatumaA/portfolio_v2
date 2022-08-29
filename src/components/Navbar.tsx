@@ -31,9 +31,9 @@ const Navbar = () => {
                 <Link href={'/#projects'}>
                     <a className="hover:text-brand-accent">PROJECTS</a>
                 </Link>
-                {/* <Link href={'/blog'}> */}
-                    <a href="https://blog.hijabicoder.dev/" target='_blank' rel='noreferrer' className="hover:text-brand-accent">BLOG</a>
-                {/* </Link> */}
+                <Link href={'/blog'}>
+                    <a className="hover:text-brand-accent">BLOG</a>
+                </Link>
                 {/* <Link href={'/videos'}> */}
                     <a href="https://www.youtube.com/channel/UC2GdvJFxCkQEJCcDZTp-Dmg/videos" target='_blank' rel='noreferrer' className="hover:text-brand-accent">VIDEOS</a>
                 {/* </Link> */}
