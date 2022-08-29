@@ -1,9 +1,11 @@
 import React from 'react'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
-import Button from '../components/Button'
-import Card from '../components/Card';
 
-const blog = ({posts}: any) => {
+import { NextPage } from 'next';
+import Card from '../../components/Card';
+import { Client, GET_BLOGS } from '../../queries';
+
+const Blog: NextPage = ({posts}: any) => {
     return (
         <div className="top-styles my-14">
             <h5 className="tagline"> BLOG POSTS </h5>
@@ -21,34 +23,14 @@ const blog = ({posts}: any) => {
     )
 }
 
-export default blog
+export default Blog
 
-const GET_BLOGS = `
-    {
-        user(username: "HijabiCoder") {
-          publication {
-            posts(page: 0) {
-              title
-              brief
-              slug
-              coverImage
-            }
-          }
-        }
-      }
-`;
 
 
 export async function getStaticProps() {
-    const client = new ApolloClient({
-        uri: 'https://api.hashnode.com/',
-        cache: new InMemoryCache()
-      });
-
-      const { data } = await client.query({
+      const { data } = await Client.query({
         query: gql `${GET_BLOGS}`
       });
-      console.log('DATAAAA', data.user.publication.posts)
 
     return {
         props: {
