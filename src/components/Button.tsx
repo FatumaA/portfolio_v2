@@ -9,7 +9,7 @@ type props = {
 const Button = ( { btnText, icon, type }: props ) => {
     return (
         <button type={type} className="btn-primary flex flex-row justify-center">
-             { icon && <div> {icon} </div> }
+            {/* { icon && <div> {icon} </div> } */}
             <div> {btnText} </div>     
         </button>
     )
