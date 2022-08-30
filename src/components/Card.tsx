@@ -32,9 +32,9 @@ function Card(props : cardInfo) {
       <div className='card'>
         <a href={isProj ? props.projs!.projectImgUrl : 'https://blog.hijabicoder.dev/'+props.blogs!.slug} target={isProj ? '_blank': undefined} rel='noreferrer'>
         <Image src={isProj ? props.projs!.projImgSrc : props.blogs!.coverImage} alt='screenshot' width="200" height="80"/> 
-          <h3 className="my-4 font-extrabold"> {isProj ? props.projs!.projStack : props.blogs!.title} </h3>
+          <h3 className="my-4 text-gray-200 font-extrabold"> {isProj ? props.projs!.projStack : props.blogs!.title} </h3>
           <p  className="mt-2 mb-4"> {isProj ? props.projs!.projDesc : props.blogs!.brief} </p>
-          <a href={isProj ? props.projs!.projCodeUrl : 'https://blog.hijabicoder.dev/'+props.blogs!.slug} target={isProj ? '_blank': undefined} rel='noreferrer' className="text-yellow-400 hover:scale-50"> 
+          <a href={isProj ? props.projs!.projCodeUrl : 'https://blog.hijabicoder.dev/'+props.blogs!.slug} target={isProj ? '_blank': undefined} rel='noreferrer' className="text-yellow-400 font-semibold hover:scale-50"> 
             {isProj ? props.projs!.projTextLink: "Read More"} 
           </a>
         </a>
