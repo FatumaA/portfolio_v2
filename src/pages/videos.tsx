@@ -1,6 +1,6 @@
 import React from 'react'
 
-const videos = () => {
+const Videos = () => {
     return (
         <div className="bg-white">
             <h1>Hello videos</h1>
@@ -8,4 +8,4 @@ const videos = () => {
     )
 }
 
-export default videos
+export default Videos
