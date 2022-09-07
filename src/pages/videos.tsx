@@ -7,7 +7,7 @@ const Videos = () => {
         </div>
     )
 }
-Videos.getInitialProps= ({res}) => {
+Videos.getInitialProps= ({res}: any) => {
         if (res) {
           res.writeHead(307, {
             Location: 'https://www.youtube.com/c/HijabiCoder/videos'
