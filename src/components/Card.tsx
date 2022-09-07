@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-interface proj {
-  key?: number;
+export interface IProj {
   projectImgUrl: string; 
   projImgSrc: string; 
   projImgAlt: string;
@@ -12,33 +11,46 @@ interface proj {
   projCodeUrl: string;
 }
 
-interface blog {
-  key?: number;
+export interface IBlog {
   title: string;
   brief: string;
   slug: string;
   coverImage: string;
 }
 
-type cardInfo = {
-  key: number;
-  projs?: proj;
-  blogs?: blog;
-}
+type CardInfo = (IProj | IBlog) 
 
-function Card(props : cardInfo) {
-  const isProj = props.projs !== undefined;
-    return (  
-      <div className='card'>
-        <a href={isProj ? props.projs!.projectImgUrl : 'https://blog.hijabicoder.dev/'+props.blogs!.slug} target={isProj ? '_blank': undefined} rel='noreferrer'>
-        <Image src={isProj ? props.projs!.projImgSrc : props.blogs!.coverImage} alt='screenshot' width="200" height="80"/> 
-          <h3 className="my-4 text-gray-200 font-extrabold"> {isProj ? props.projs!.projStack : props.blogs!.title} </h3>
-          <p  className="mt-2 mb-4"> {isProj ? props.projs!.projDesc : props.blogs!.brief} </p>
-          <a href={isProj ? props.projs!.projCodeUrl : 'https://blog.hijabicoder.dev/'+props.blogs!.slug} target={isProj ? '_blank': undefined} rel='noreferrer' className="text-yellow-400 font-semibold hover:scale-50"> 
-            {isProj ? props.projs!.projTextLink: "Read More"} 
+function Card({ cardInfo } : { cardInfo: CardInfo }) {
+  const isProj = "projDesc" in cardInfo
+  console.log(isProj)
+    return ( 
+      <>
+      {isProj ?   
+        <div className='card'>
+          <a href={cardInfo.projectImgUrl} target='_blank' rel='noreferrer'>
+          <Image src={cardInfo.projImgSrc} alt='screenshot' width="200" height="80"/> 
+            <h3 className="my-4 text-gray-200 font-extrabold"> {cardInfo.projStack} </h3>
+            <p  className="mt-2 mb-4"> {cardInfo.projDesc} </p>
+            <a href={cardInfo.projCodeUrl} target='_blank' rel='noreferrer' 
+              className="text-yellow-400 font-semibold hover:scale-50"> 
+                {cardInfo.projTextLink} 
+            </a>
+          </a>
+        </div>
+        :
+        <div className='card'>
+        <a href={'https://blog.hijabicoder.dev/'+cardInfo!.slug} rel='noreferrer'>
+        <Image src={cardInfo!.coverImage} alt='screenshot' width="200" height="80"/> 
+          <h3 className="my-4 text-gray-200 font-extrabold"> {cardInfo!.title} </h3>
+          <p  className="mt-2 mb-4"> {cardInfo!.brief} </p>
+          <a href={'https://blog.hijabicoder.dev/'+cardInfo!.slug} rel='noreferrer' 
+            className="text-yellow-400 font-semibold hover:scale-50"> 
+              Read More
           </a>
         </a>
-      </div>
+      </div> 
+    } 
+    </> 
     )
 }
 
