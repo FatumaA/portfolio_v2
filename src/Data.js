@@ -58,8 +58,8 @@ export const ProfessionalProjectsInfo = [
       projectImgUrl: 'https://www.hijabicoder.dev/',
       projImgSrc: '/images/screenshotFolio_v2.png',
       projImgAlt: 'portfolio v_2',
-      projStack: 'Built with NextJS, Youtube and Hashnode API',
-      projDesc: 'My portfolio version 2 built with create-next-app and hosted on the Netlify platform. It consumes the Youtube API and Hashnode API',
+      projStack: 'Built with NextJS and the Hashnode API',
+      projDesc: 'My portfolio version 2 built with create-next-app and hosted on the Netlify platform. It consumes the Hashnode API',
       projTextLink: 'View Source Code',
       projCodeUrl:  'https://github.com/FatumaA/portfolio_v2'
     }
