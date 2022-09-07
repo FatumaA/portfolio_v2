@@ -35,7 +35,7 @@ const Navbar = () => {
                     <a className="hover:text-brand-accent">BLOG</a>
                 </Link>
                 {/* <Link href={'/videos'}> */}
-                    <a href="https://www.youtube.com/channel/UC2GdvJFxCkQEJCcDZTp-Dmg/videos" target='_blank' rel='noreferrer' className="hover:text-brand-accent">VIDEOS</a>
+                    <a href='videos' target='_blank' rel='noreferrer' className="hover:text-brand-accent">VIDEOS</a>
                 {/* </Link> */}
                 <Link href={'/#contacts'}>
                     <a className="hover:text-brand-accent">CONTACTS</a>
