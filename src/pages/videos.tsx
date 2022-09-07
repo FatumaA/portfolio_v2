@@ -7,4 +7,15 @@ const Videos = () => {
         </div>
     )
 }
+Videos.getInitialProps= ({res}) => {
+        if (res) {
+          res.writeHead(307, {
+            Location: 'https://www.youtube.com/c/HijabiCoder/videos'
+          });
+          res.end();
+        }
+      
+        return {};
+}
+
 export default Videos

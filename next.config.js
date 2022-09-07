@@ -4,13 +4,13 @@ module.exports = {
   images: {
     domains: ["cdn.hashnode.com"],
   },
-  async redirects() {
-    return [
-      {
-        source: '/videos',
-        destination: 'https://www.youtube.com/c/HijabiCoder/videos',
-        permanent: false,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/videos',
+  //       destination: 'https://www.youtube.com/c/HijabiCoder/videos',
+  //       permanent: false,
+  //     },
+  //   ]
+  // },
 }
