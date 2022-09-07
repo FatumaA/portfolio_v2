@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import { gql } from '@apollo/client'
 import { NextPage } from 'next'
 import { Client, GET_BLOGS, GET_ONE_BLOG } from '../../queries'
 
@@ -31,19 +31,15 @@ export async function getStaticPaths() {
   }
 
 export async function getStaticProps({params}: any) {
-    const client = new ApolloClient({
-        uri: 'https://api.hashnode.com/',
-        cache: new InMemoryCache()
-      });
-
-      const { data } = await client.query({
+      const { data } = await Client.query({
         query: gql `${GET_ONE_BLOG(params.slug)}`
       });
 
     return {
         props: {
           postBody: data.post
-        }
+        },
+        revalidate: 86400
     }  
   }
 
