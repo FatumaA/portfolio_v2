@@ -1,6 +1,4 @@
 [[redirects]]
   from = "/videos"
   to = "https://www.youtube.com/c/HijabiCoder/videos"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  status = 200
