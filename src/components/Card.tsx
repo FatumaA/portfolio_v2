@@ -26,18 +26,18 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 		<>
 			{isProj ? (
 				<div
-					className="card"
+					className="card rounded-sm"
 					onClick={() => window.open(cardInfo.projectImgUrl, "_blank")}
 				>
 					<Image
+						className="rounded-sm"
 						src={cardInfo.projImgSrc}
 						alt="screenshot"
-						width="200"
-						height="80"
+						width={200}
+						height={80}
 					/>
 					<h3 className="my-4 text-gray-200 font-extrabold">
-						{" "}
-						{cardInfo.projStack}{" "}
+						{cardInfo.projStack}
 					</h3>
 					<p className="mt-2 mb-4"> {cardInfo.projDesc} </p>
 					<a
