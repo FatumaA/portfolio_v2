@@ -38,7 +38,10 @@ const Navbar = () => {
 						<Link href="#projects" className="hover:text-brand-accent">
 							PROJECTS
 						</Link>
-						<Link href={"/blog"} className="hover:text-brand-accent">
+						<Link
+							href={"https://blog.hijabicoder.dev/"}
+							className="hover:text-brand-accent"
+						>
 							BLOG
 						</Link>
 						{/* <Link href={'/videos'}> */}
