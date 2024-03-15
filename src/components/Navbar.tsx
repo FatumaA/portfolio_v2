@@ -29,17 +29,17 @@ const Navbar = () => {
 					</div>
 
 					<div className="space-x-4 hidden md:block">
-						<Link href="#home" className="hover:text-brand-accent">
+						<Link href="/#home" className="hover:text-brand-accent">
 							HOME
 						</Link>
-						<Link href="#about" className="hover:text-brand-accent">
+						<Link href="/#about" className="hover:text-brand-accent">
 							ABOUT
 						</Link>
-						<Link href="#projects" className="hover:text-brand-accent">
+						<Link href="/#projects" className="hover:text-brand-accent">
 							PROJECTS
 						</Link>
 						<Link
-							href={"https://blog.hijabicoder.dev/"}
+							href={"https://blog.hijabicoder.dev"}
 							className="hover:text-brand-accent"
 						>
 							BLOG
@@ -54,7 +54,7 @@ const Navbar = () => {
 							VIDEOS
 						</Link>
 						{/* </Link> */}
-						<Link href="#contacts" className="hover:text-brand-accent">
+						<Link href="/#contacts" className="hover:text-brand-accent">
 							CONTACTS
 						</Link>
 					</div>
@@ -97,14 +97,14 @@ const Navbar = () => {
 							HOME
 						</Link>
 						<Link
-							href="#about"
+							href="/#about"
 							onClick={handleClick}
 							className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark"
 						>
 							ABOUT
 						</Link>
 						<Link
-							href="#projects"
+							href="/#projects"
 							onClick={handleClick}
 							className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark"
 						>
@@ -133,7 +133,7 @@ const Navbar = () => {
 						</Link>
 						{/* </Link> */}
 						<Link
-							href="#contacts"
+							href="/#contacts"
 							onClick={handleClick}
 							className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark"
 						>
