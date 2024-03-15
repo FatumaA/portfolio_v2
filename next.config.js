@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
 	reactStrictMode: true,
-	// images: {
-	//   domains: ["cdn.hashnode.com"],
-	// },
+	images: {
+		domains: ["cdn.hashnode.com"],
+	},
 	// async redirects() {
 	//   return [
 	//     {
