@@ -2,7 +2,12 @@
 module.exports = {
 	reactStrictMode: true,
 	images: {
-		domains: ["cdn.hashnode.com"],
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "cdn.hashnode.com",
+			},
+		],
 	},
 	// async redirects() {
 	//   return [
