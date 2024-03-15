@@ -15,7 +15,9 @@ export interface IBlog {
 	title: string;
 	brief: string;
 	slug: string;
-	coverImage: string;
+	coverImage: {
+		url: string;
+	};
 }
 
 type CardInfo = IProj | IBlog;
@@ -60,7 +62,7 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 					}
 				>
 					<Image
-						src={cardInfo!.coverImage}
+						src={cardInfo!.coverImage.url}
 						alt="screenshot"
 						width="200"
 						height="80"

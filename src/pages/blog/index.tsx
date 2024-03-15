@@ -5,7 +5,7 @@ import Card, { IBlog } from "../../components/Card";
 import { Client, GET_BLOGS } from "../../queries";
 
 const Blog = () =>
-	// {posts}: any
+	// { posts, error }: any
 	{
 		return (
 			<div className="top-styles my-14">
@@ -14,10 +14,9 @@ const Blog = () =>
 					Thoughts on the tech I&apos;m using, learning and loving{" "}
 				</h1>
 				<div className="card-section">
-					{/* {posts.map((p: IBlog, index: number ) => 
-             <Card key={index} cardInfo={p}/>
-
-            )} */}
+					{/* {posts.map((p: IBlog, index: number) => (
+					<Card key={index} cardInfo={p} />
+				))} */}
 				</div>
 			</div>
 		);
@@ -26,13 +25,15 @@ const Blog = () =>
 export default Blog;
 
 // export async function getStaticProps() {
-//       const { data } = await Client.query({
-//         query: gql `${GET_BLOGS}`
-//       });
+// 	const { data } = await Client.query({
+// 		query: gql`
+// 			${GET_BLOGS}
+// 		`,
+// 	});
 
-//     return {
-//         props: {
-//           posts: data.user.publication.posts
-//         }
-//     }
-//   }
+// 	return {
+// 		props: {
+// 			posts: data.user.publication.posts,
+// 		},
+// 	};
+// }
