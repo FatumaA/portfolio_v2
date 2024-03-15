@@ -18,6 +18,7 @@
     "typescript": "^5.4.2"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.41.3",
     "@types/node": "^20.11.27",
     "@types/react": "^18.2.66",
     "autoprefixer": "^10.4.18",
