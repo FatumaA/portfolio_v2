@@ -23,7 +23,7 @@ const Contacts = () => {
 					Name:
 				</label>
 				<input
-					className="p-2 rounded-sm text-gray-700"
+					className="bg-inherit p-2 rounded-sm border focus:border-brand-accent focus:outline-brand-accent focus:outline-none"
 					type="text"
 					name="name"
 					placeholder="Name..."
@@ -34,7 +34,7 @@ const Contacts = () => {
 					Email:
 				</label>
 				<input
-					className="p-2 rounded-sm text-gray-700"
+					className="bg-inherit p-2 rounded-sm border focus:border-brand-accent focus:outline-brand-accent focus:outline-none"
 					type="email"
 					name="email"
 					placeholder="Email..."
@@ -45,7 +45,7 @@ const Contacts = () => {
 					Message:
 				</label>
 				<textarea
-					className="p-2 rounded-sm text-gray-700"
+					className="bg-inherit p-2 rounded-sm border focus:border-brand-accent focus:outline-brand-accent focus:outline-none"
 					rows={10}
 					name="message"
 					required
