@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -38,13 +39,9 @@ const Navbar = () => {
 						<Link href="/#projects" className="hover:text-brand-accent">
 							PROJECTS
 						</Link>
-						<Link
-							href={"https://blog.hijabicoder.dev"}
-							className="hover:text-brand-accent"
-						>
+						<Link href={"/blog"} className="hover:text-brand-accent">
 							BLOG
 						</Link>
-						{/* <Link href={'/videos'}> */}
 						<Link
 							href="https://www.youtube.com/c/HijabiCoder/videos"
 							target="_blank"
@@ -53,7 +50,6 @@ const Navbar = () => {
 						>
 							VIDEOS
 						</Link>
-						{/* </Link> */}
 						<Link href="/#contacts" className="hover:text-brand-accent">
 							CONTACTS
 						</Link>
@@ -110,19 +106,14 @@ const Navbar = () => {
 						>
 							PROJECTS
 						</Link>
-						{/* <Link href={'/blog'}> */}
-						{/* <a onClick={handleClick} className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark">BLOG</a> */}
 						<Link
-							href="https://blog.hijabicoder.dev/"
+							href="/blog"
 							target="_blank"
 							rel="noreferrer"
 							className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark"
 						>
 							BLOG
 						</Link>
-						{/* </Link> */}
-						{/* <Link href={'/videos'}> */}
-						{/* <a onClick={handleClick} className="block p-4 hover:text-brand-accent hover:bg-brand-hoverDark">VIDEOS</a> */}
 						<Link
 							href="https://www.youtube.com/channel/UC2GdvJFxCkQEJCcDZTp-Dmg/videos"
 							target="_blank"
@@ -131,7 +122,6 @@ const Navbar = () => {
 						>
 							VIDEOS
 						</Link>
-						{/* </Link> */}
 						<Link
 							href="/#contacts"
 							onClick={handleClick}
