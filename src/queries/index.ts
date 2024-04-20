@@ -1,40 +1,30 @@
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import { ApolloClient, gql, HttpLink, InMemoryCache } from "@apollo/client";
+import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc";
 
-export const Client = new ApolloClient({
-	uri: "https://gql.hashnode.com",
-	cache: new InMemoryCache(),
+export const { getClient } = registerApolloClient(() => {
+	return new ApolloClient({
+		cache: new InMemoryCache(),
+		link: new HttpLink({
+			uri: "https://gql.hashnode.com",
+		}),
+	});
 });
 
-export const GET_BLOGS = gql`
+export const getBlogsQuery = gql`
 	{
-		query
-		Publication {
-			publication(host: "blog.hijabicoder.dev") {
-				posts(first: 20) {
-					edges {
-						node {
-							coverImage {
-								url
-							}
-							title
-							brief
-							slug
+		publication(host: "blog.hijabicoder.dev") {
+			posts(first: 20) {
+				edges {
+					node {
+						coverImage {
+							url
 						}
+						title
+						brief
+						slug
 					}
 				}
 			}
 		}
 	}
 `;
-
-// export const GET_ONE_BLOG = (slugg: string) => `
-// {
-//     post(slug: "${slugg}" , hostname:"blog.hijabicoder.dev") {
-//         title,
-//         slug,
-//         coverImage,
-//         content,
-//         contentMarkdown
-//       }
-//   }
-// `;
