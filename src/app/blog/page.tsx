@@ -19,7 +19,7 @@ const Page = async () => {
 				Thoughts on the tech I&apos;m using, learning and loving{" "}
 			</h1>
 			<div className="card-section">
-				{edges.map(({ node }: IBlog, index: number) => (
+				{edges.map(({ node }: any, index: number) => (
 					<Card key={index} cardInfo={node} />
 				))}
 			</div>
