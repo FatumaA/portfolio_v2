@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface IProj {
 	projectImgUrl: string;
@@ -53,35 +54,37 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 					</a>
 				</div>
 			) : (
-				<div
-					className="card"
-					onClick={() =>
-						window.open(
-							"https://blog.hijabicoder.dev/" + cardInfo!.slug,
-							"_blank"
-						)
-					}
-				>
-					<Image
-						src={cardInfo!.coverImage.url}
-						alt="screenshot"
-						width="200"
-						height="80"
-					/>
-					<h3 className="my-4 text-gray-200 font-extrabold">
-						{" "}
-						{cardInfo!.title}{" "}
-					</h3>
-					<p className="mt-2 mb-4"> {cardInfo!.brief} </p>
-					<a
-						href={"https://blog.hijabicoder.dev/" + cardInfo!.slug}
-						target="_blank"
-						rel="noreferrer"
-						className="text-yellow-400 font-semibold hover:scale-50"
-					>
-						Read More
-					</a>
-				</div>
+				<Link className="card" href={`/${cardInfo.slug}`}>
+					<div className="flex flex-col">
+						<div className="w-full h-48">
+							<Image
+								src={cardInfo!.coverImage.url}
+								alt="screenshot"
+								width="200"
+								height="200"
+								className="h-full w-full object-cover rounded-md"
+							/>
+						</div>
+						<div className="flex flex-col flex-grow justify-between">
+							<div>
+								<h2 className="text-2xl my-4 text-gray-200 font-extrabold">
+									{cardInfo!.title}
+								</h2>
+								<p className="mt-2 mb-4">
+									{cardInfo!.brief.substring(0, 120) + "..."}
+								</p>
+							</div>
+							<a
+								href={"https://blog.hijabicoder.dev/" + cardInfo!.slug}
+								target="_blank"
+								rel="noreferrer"
+								className="text-yellow-400 font-semibold hover:scale-50 self-end"
+							>
+								Read More
+							</a>
+						</div>
+					</div>
+				</Link>
 			)}
 		</>
 	);
