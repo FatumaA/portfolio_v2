@@ -16,7 +16,7 @@ html {
            my-6 font-bold;
   }
   .card-section {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-6 w-10/12;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
   }
   .card {
     @apply bg-bgColor-cardDark text-gray-300 text-lg lg:text-xl font-light p-6 shadow-sm rounded-md hover:bg-brand-hoverDark;
@@ -25,6 +25,6 @@ html {
     @apply text-gray-100 text-center mb-4 tracking-widest font-extralight border-b-4 border-brand-accent;
   }
   .headline {
-    @apply text-white text-center mb-6 font-bold;
+    @apply text-3xl text-white text-center mb-6 font-bold;
   }
 }
