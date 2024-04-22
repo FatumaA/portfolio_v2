@@ -17,6 +17,7 @@ export interface IBlog {
 	title: string;
 	brief: string;
 	slug: string;
+	subtitle: string;
 	coverImage: {
 		url: string;
 	};
@@ -54,36 +55,33 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 					</a>
 				</div>
 			) : (
-				<Link className="card" href={`/${cardInfo.slug}`}>
-					<div className="flex flex-col">
-						<div className="w-full h-48">
-							<Image
-								src={cardInfo!.coverImage.url}
-								alt="screenshot"
-								width="200"
-								height="200"
-								className="h-full w-full object-cover rounded-md"
-							/>
-						</div>
-						<div className="flex flex-col flex-grow justify-between">
-							<div>
-								<h2 className="text-2xl my-4 text-gray-200 font-extrabold">
-									{cardInfo!.title}
-								</h2>
-								<p className="mt-2 mb-4">
-									{cardInfo!.brief.substring(0, 120) + "..."}
-								</p>
-							</div>
-							<a
-								href={"https://blog.hijabicoder.dev/" + cardInfo!.slug}
-								target="_blank"
-								rel="noreferrer"
-								className="text-yellow-400 font-semibold hover:scale-50 self-end"
-							>
-								Read More
-							</a>
-						</div>
+				<Link
+					className="card flex flex-col justify-between"
+					href={`/${cardInfo.slug}`}
+				>
+					<div className="h-48">
+						<Image
+							src={cardInfo!.coverImage.url}
+							alt="screenshot"
+							width="200"
+							height="200"
+							className="h-full w-full object-cover rounded-md"
+						/>
 					</div>
+					<h2 className="text-2xl my-4 text-gray-200 font-extrabold">
+						{cardInfo!.title}
+					</h2>
+					<p className="mt-2 mb-4 overflow-auto">
+						{cardInfo!.brief.substring(0, 120) + "..."}
+					</p>
+					<a
+						href={"https://blog.hijabicoder.dev/" + cardInfo!.slug}
+						target="_blank"
+						rel="noreferrer"
+						className="text-yellow-400 font-semibold hover:scale-50 self-end"
+					>
+						Read More
+					</a>
 				</Link>
 			)}
 		</>
