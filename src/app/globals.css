@@ -19,7 +19,7 @@ html {
     @apply grid grid-cols-1 md:grid-cols-2 gap-6;
   }
   .card {
-    @apply bg-bgColor-cardDark text-gray-300 text-lg lg:text-xl font-light p-6 shadow-sm rounded-md hover:bg-brand-hoverDark;
+    @apply bg-bgColor-cardDark text-gray-300 text-lg lg:text-xl font-light p-6 shadow-sm rounded-md hover:scale-105;
   }
   .tagline {
     @apply text-gray-100 text-center mb-4 tracking-widest font-extralight border-b-4 border-brand-accent;
