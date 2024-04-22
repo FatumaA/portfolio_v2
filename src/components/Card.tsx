@@ -78,7 +78,7 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 						href={"https://blog.hijabicoder.dev/" + cardInfo!.slug}
 						target="_blank"
 						rel="noreferrer"
-						className="text-yellow-400 font-semibold hover:scale-50 self-end"
+						className="text-yellow-400 font-semibold hover:scale-110 self-end"
 					>
 						Read More
 					</a>
