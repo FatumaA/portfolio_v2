@@ -25,6 +25,6 @@ html {
     @apply text-gray-100 text-center mb-4 tracking-widest font-extralight border-b-4 border-brand-accent;
   }
   .headline {
-    @apply text-3xl text-white text-center mb-6 font-bold;
+    @apply text-4xl text-white text-center mb-6 font-bold;
   }
 }
