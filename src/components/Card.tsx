@@ -65,7 +65,7 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 				>
 					<div className="h-48">
 						<Image
-							src={cardInfo!.coverImage.url}
+							src={cardInfo!.coverImage?.url}
 							alt="screenshot"
 							width="200"
 							height="200"
