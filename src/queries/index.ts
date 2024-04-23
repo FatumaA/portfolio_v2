@@ -20,8 +20,13 @@ export const getBlogsQuery = gql`
 							url
 						}
 						title
+						subtitle
 						brief
 						slug
+						content {
+							html
+							markdown
+						}
 					}
 				}
 			}
