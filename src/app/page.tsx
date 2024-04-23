@@ -10,11 +10,11 @@ import Contacts from "../components/Contacts";
 const Home: NextPage = () => {
 	return (
 		<div className="max-w-4xl mx-auto w-4/5">
-			<Head>
+			{/* <metadata>
 				<title>Hijabi Coder</title>
 				<meta name="description" content="Portfolio version 2" />
 				<link rel="icon" href="/favicon.ico" />
-			</Head>
+			</metadata> */}
 			<main className="relative">
 				<Hero />
 				<Banner />
