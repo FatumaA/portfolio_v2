@@ -29,7 +29,17 @@ export interface IBlog {
 
 type CardInfo = IProj | IBlog;
 
-function Card({ cardInfo }: { cardInfo: CardInfo }) {
+// interface CardProps {
+// 	isInDialog?: boolean;
+// }
+
+function Card({
+	cardInfo,
+	isInDialog,
+}: {
+	cardInfo: CardInfo;
+	isInDialog?: boolean;
+}) {
 	const isProj = "projDesc" in cardInfo;
 	return (
 		<>
@@ -60,23 +70,27 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 				</div>
 			) : (
 				<Link
-					className="card flex flex-col justify-between"
-					href={`/${cardInfo.slug}`}
+					className="card flex flex-col mb-6 justify-between"
+					href={`https://blog.hijabicoder.dev/${cardInfo.slug}`}
+					target="_blank"
 				>
-					<div className="h-48">
-						<Image
-							src={cardInfo!.coverImage?.url}
-							alt="screenshot"
-							width="200"
-							height="200"
-							className="h-full w-full object-cover rounded-md"
-						/>
-					</div>
+					{!isInDialog ? (
+						<div className="h-48">
+							<Image
+								src={isInDialog ? "" : cardInfo!.coverImage?.url}
+								alt="screenshot"
+								width="200"
+								height="200"
+								className="h-full w-full object-cover rounded-md"
+							/>
+						</div>
+					) : null}
+
 					<h2 className="text-2xl my-4 text-gray-200 font-extrabold">
 						{cardInfo!.title}
 					</h2>
 					<p className="mt-2 mb-4 overflow-auto">
-						{cardInfo!.brief.substring(0, 120) + "..."}
+						{cardInfo!.brief?.substring(0, 120) + "..."}
 					</p>
 					<span className="text-yellow-400 font-semibold hover:scale-110 self-end">
 						Read More
