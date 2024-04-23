@@ -6,13 +6,14 @@ export const { getClient } = registerApolloClient(() => {
 		cache: new InMemoryCache(),
 		link: new HttpLink({
 			uri: "https://gql.hashnode.com",
+			// fetchOptions: { cache: "no-store" },
 		}),
 	});
 });
 
 export const getBlogsQuery = gql`
 	{
-		publication(host: "hijabicoder.dev") {
+		publication(host: "blog.hijabicoder.dev") {
 			posts(first: 20) {
 				edges {
 					node {
