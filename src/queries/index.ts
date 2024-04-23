@@ -12,7 +12,7 @@ export const { getClient } = registerApolloClient(() => {
 
 export const getBlogsQuery = gql`
 	{
-		publication(host: "hijabicoder.dev/blog") {
+		publication(host: "hijabicoder.dev") {
 			posts(first: 20) {
 				edges {
 					node {
