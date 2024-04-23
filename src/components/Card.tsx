@@ -21,6 +21,10 @@ export interface IBlog {
 	coverImage: {
 		url: string;
 	};
+	content: {
+		html: string;
+		markdown: string;
+	};
 }
 
 type CardInfo = IProj | IBlog;
@@ -74,14 +78,9 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 					<p className="mt-2 mb-4 overflow-auto">
 						{cardInfo!.brief.substring(0, 120) + "..."}
 					</p>
-					<a
-						href={"https://blog.hijabicoder.dev/" + cardInfo!.slug}
-						target="_blank"
-						rel="noreferrer"
-						className="text-yellow-400 font-semibold hover:scale-110 self-end"
-					>
+					<span className="text-yellow-400 font-semibold hover:scale-110 self-end">
 						Read More
-					</a>
+					</span>
 				</Link>
 			)}
 		</>
