@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface IProj {
 	projectImgUrl: string;
@@ -16,8 +17,13 @@ export interface IBlog {
 	title: string;
 	brief: string;
 	slug: string;
+	subtitle: string;
 	coverImage: {
 		url: string;
+	};
+	content: {
+		html: string;
+		markdown: string;
 	};
 }
 
@@ -53,35 +59,29 @@ function Card({ cardInfo }: { cardInfo: CardInfo }) {
 					</a>
 				</div>
 			) : (
-				<div
-					className="card"
-					onClick={() =>
-						window.open(
-							"https://blog.hijabicoder.dev/" + cardInfo!.slug,
-							"_blank"
-						)
-					}
+				<Link
+					className="card flex flex-col justify-between"
+					href={`/${cardInfo.slug}`}
 				>
-					<Image
-						src={cardInfo!.coverImage.url}
-						alt="screenshot"
-						width="200"
-						height="80"
-					/>
-					<h3 className="my-4 text-gray-200 font-extrabold">
-						{" "}
-						{cardInfo!.title}{" "}
-					</h3>
-					<p className="mt-2 mb-4"> {cardInfo!.brief} </p>
-					<a
-						href={"https://blog.hijabicoder.dev/" + cardInfo!.slug}
-						target="_blank"
-						rel="noreferrer"
-						className="text-yellow-400 font-semibold hover:scale-50"
-					>
+					<div className="h-48">
+						<Image
+							src={cardInfo!.coverImage?.url}
+							alt="screenshot"
+							width="200"
+							height="200"
+							className="h-full w-full object-cover rounded-md"
+						/>
+					</div>
+					<h2 className="text-2xl my-4 text-gray-200 font-extrabold">
+						{cardInfo!.title}
+					</h2>
+					<p className="mt-2 mb-4 overflow-auto">
+						{cardInfo!.brief.substring(0, 120) + "..."}
+					</p>
+					<span className="text-yellow-400 font-semibold hover:scale-110 self-end">
 						Read More
-					</a>
-				</div>
+					</span>
+				</Link>
 			)}
 		</>
 	);
