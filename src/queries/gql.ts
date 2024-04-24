@@ -6,7 +6,6 @@ export const { getClient } = registerApolloClient(() => {
 		cache: new InMemoryCache(),
 		link: new HttpLink({
 			uri: "https://gql.hashnode.com",
-			// fetchOptions: { cache: "no-store" },
 		}),
 	});
 });
@@ -17,6 +16,7 @@ export const getBlogsQuery = gql`
 			posts(first: 20) {
 				edges {
 					node {
+						id
 						coverImage {
 							url
 						}
@@ -30,6 +30,24 @@ export const getBlogsQuery = gql`
 						}
 					}
 				}
+			}
+		}
+	}
+`;
+
+export const getBlogQuery = gql`
+	query GetBlog($id: ID!) {
+		post(id: $id) {
+			slug
+			title
+			subtitle
+			brief
+			content {
+				html
+				markdown
+			}
+			coverImage {
+				url
 			}
 		}
 	}
