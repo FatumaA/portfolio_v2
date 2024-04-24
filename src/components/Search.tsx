@@ -1,8 +1,9 @@
 "use client";
 import React, { FormEvent, useState } from "react";
-import Card, { IBlog } from "./Card";
+import Card from "./Card";
 import Dialog from "./Dialog";
-import { supabaseClient } from "@/lib/supabaseClient";
+import { IBlog } from "@/types";
+import { searchSupabase } from "@/queries/supabase";
 
 const Search = () => {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -13,8 +14,6 @@ const Search = () => {
 	const handleSearch = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 
-		// const searchTerm = searchData.get("search")!;
-		// const searchString = searchTerm.toString();
 		if (!searchTerm) {
 			setError("No search term entered");
 			setTimeout(() => {
@@ -34,24 +33,9 @@ const Search = () => {
 			preparedDBSearchString
 		);
 
-		const { data, error } = await supabaseClient
-			.from("hashnode_blogs")
-			.select("*")
-			.textSearch("title", preparedDBSearchString, {
-				type: "websearch",
-				config: "english",
-			});
+		const res = await searchSupabase(preparedDBSearchString);
 
-		const { data: mdData, error: mdError } = await supabaseClient
-			.from("hashnode_blogs")
-			.select("*")
-			.textSearch("markdown", preparedDBSearchString, {
-				type: "websearch",
-				config: "english",
-			});
-
-		// combine data and mdData into a single array that is in this shape [{}, {}, {}]
-		if (data?.length === 0 && mdData?.length === 0) {
+		if (res.length === 0) {
 			setSearchTerm("");
 			setIsSearching(false);
 			setError("No search results found");
@@ -63,10 +47,8 @@ const Search = () => {
 		}
 
 		setSearchTerm("");
-
-		console.log("COMBINED SEARCHH", [data, mdData]);
 		setIsSearching(false);
-		setSearchResults([...data!, ...mdData!]);
+		setSearchResults(res);
 	};
 	return (
 		<div className="flex flex-col mb-8 ">
@@ -84,9 +66,9 @@ const Search = () => {
 					name="search"
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
-					className="rounded-sm p-2 bg-inherit w-96 border focus:border-brand-accent focus:outline-brand-accent focus:outline-none"
+					className="rounded-sm p-2 bg-inherit md:w-96 border focus:border-brand-accent focus:outline-brand-accent focus:outline-none"
 				/>
-				<button type="submit" className="btn-primary my-0 w-32">
+				<button type="submit" className="btn-primary my-0 md:w-32">
 					{isSearching ? "Searching..." : "Search"}
 				</button>
 			</form>
