@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { IBlog } from "@/types";
 
 export interface IProj {
 	projectImgUrl: string;
@@ -11,20 +12,6 @@ export interface IProj {
 	projDesc: string;
 	projTextLink: string;
 	projCodeUrl: string;
-}
-
-export interface IBlog {
-	title: string;
-	brief: string;
-	slug: string;
-	subtitle: string;
-	coverImage: {
-		url: string;
-	};
-	content: {
-		html: string;
-		markdown: string;
-	};
 }
 
 type CardInfo = IProj | IBlog;
