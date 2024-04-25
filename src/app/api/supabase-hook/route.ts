@@ -28,6 +28,7 @@ export async function POST(req: Request) {
 		console.log("fetched", data);
 
 		if (error) {
+			console.error("Error getting matching blog in db", error.message);
 			return NextResponse.json({
 				status: 500,
 				statusText: "Error getting matching blog in db",
@@ -68,6 +69,7 @@ export async function POST(req: Request) {
 			.eq("hashnode_id", id);
 
 		if (updatedError) {
+			console.error("Error updating post", updatedError.message);
 			return NextResponse.json({
 				status: 500,
 				statusText: "Error updating post",
@@ -77,7 +79,7 @@ export async function POST(req: Request) {
 
 		console.log("Successfully updated blog in db");
 
-		return NextResponse.json({ status: 200, statusText: "Post updated", data });
+		return NextResponse.json({ status: 200, statusText: "Post updated" });
 	} else if (eventType === EventType.PostDeleted) {
 		console.log("New Post Delete Event");
 
@@ -87,16 +89,20 @@ export async function POST(req: Request) {
 			.eq("hashnode_id", id);
 
 		if (error) {
+			console.log("Error deleting post", error.message);
 			return NextResponse.json({
 				status: 500,
-				statusText: "Error updating post",
+				statusText: "Error deleting post",
 				error: error.message,
 			});
 		}
 
 		console.log("Successfully deleted blog in db");
 
-		return NextResponse.json({ status: 200, statusText: "Post updated" });
+		return NextResponse.json({
+			status: 200,
+			statusText: "Post successfully deleted",
+		});
 	} else {
 		console.log("New Post Publish Event");
 
@@ -131,6 +137,7 @@ export async function POST(req: Request) {
 			});
 
 		if (publishError) {
+			console.error("Error updating post", publishError.message);
 			return NextResponse.json({
 				status: 500,
 				statusText: "Error updating post",
