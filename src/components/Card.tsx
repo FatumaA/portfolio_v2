@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { IBlog } from "@/types";
+import { IBlog } from "../types";
 
 export interface IProj {
 	projectImgUrl: string;
@@ -15,10 +15,6 @@ export interface IProj {
 }
 
 type CardInfo = IProj | IBlog;
-
-// interface CardProps {
-// 	isInDialog?: boolean;
-// }
 
 function Card({
 	cardInfo,
