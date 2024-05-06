@@ -1,13 +1,55 @@
 import { supabaseServerClient } from "@/lib/supabase";
 import { getBlogQuery, getClient } from "@/queries/gql";
 import { NextResponse } from "next/server";
+import crypto from "crypto";
 
 enum EventType {
 	PostDeleted = "post_deleted",
 	PostPublished = "post_published",
 	PostUpdated = "post_updated",
 }
+
+const _validateSignature = (
+	incomingSignatureHeader: string | null,
+	secret: string,
+	payload: any
+): boolean => {
+	if (!incomingSignatureHeader) return false;
+
+	const parts = incomingSignatureHeader.split(",");
+	const timestamp = parts.find((part) => part.startsWith("t="))?.split("=")[1];
+	const signature = parts.find((part) => part.startsWith("v1="))?.split("=")[1];
+
+	if (!timestamp || !signature) return false;
+
+	const generatedSignature = crypto
+		.createHmac("sha256", secret)
+		.update(`${timestamp}.${JSON.stringify(payload)}`)
+		.digest("hex");
+
+	return crypto.timingSafeEqual(
+		Buffer.from(generatedSignature),
+		Buffer.from(signature)
+	);
+};
 export async function POST(req: Request) {
+	const header = req.headers.get("X-Hashnode-Signature");
+	const secretKey = process.env.HASHNODE_WEBHOOK_SECRET;
+	const payload = await req.json();
+
+	console.log("Request body!!!!!", payload);
+
+	const isValid = _validateSignature(header, secretKey!, payload);
+
+	console.log("isValid!!!!!", isValid);
+
+	if (!isValid) {
+		console.error("Invalid Signature");
+		return NextResponse.json({
+			status: 401,
+			statusText: "Invalid request",
+		});
+	}
 	console.log("Hashnode Webhook Received");
 
 	const {
@@ -15,26 +57,26 @@ export async function POST(req: Request) {
 			post: { id },
 			eventType,
 		},
-	} = await req.json();
+	} = payload;
 
 	if (eventType === EventType.PostUpdated) {
 		console.log("New Post Update Event");
 
-		const { data, error } = await supabaseServerClient
-			.from("hashnode_blogs")
-			.select()
-			.eq("hashnode_id", id);
+		// const { data, error } = await supabaseServerClient
+		// 	.from("hashnode_blogs")
+		// 	.select()
+		// 	.eq("hashnode_id", id);
 
-		console.log("fetched", data);
+		// console.log("fetched", data);
 
-		if (error) {
-			console.error("Error getting matching blog in db", error.message);
-			return NextResponse.json({
-				status: 500,
-				statusText: "Error getting matching blog in db",
-				error: error.message,
-			});
-		}
+		// if (error) {
+		// 	console.error("Error getting matching blog in db", error.message);
+		// 	return NextResponse.json({
+		// 		status: 500,
+		// 		statusText: "Error getting matching blog in db",
+		// 		error: error.message,
+		// 	});
+		// }
 
 		console.log("Successfully fetched blog from db");
 
