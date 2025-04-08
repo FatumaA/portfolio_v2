@@ -1,6 +1,6 @@
 import { AiFillCloseCircle } from "react-icons/ai";
 import { ReactNode, useState } from "react";
-import { IBlog } from "./Card";
+import { IBlog } from "../types";
 
 interface DialogProps {
 	setSearchResults?: (blogs: IBlog[]) => void;
