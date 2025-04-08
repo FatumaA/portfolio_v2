@@ -62,21 +62,21 @@ export async function POST(req: Request) {
 	if (eventType === EventType.PostUpdated) {
 		console.log("New Post Update Event");
 
-		// const { data, error } = await supabaseServerClient
-		// 	.from("hashnode_blogs")
-		// 	.select()
-		// 	.eq("hashnode_id", id);
+		const { data, error } = await supabaseServerClient
+			.from("hashnode_blogs")
+			.select()
+			.eq("hashnode_id", id);
 
-		// console.log("fetched", data);
+		console.log("fetched", data);
 
-		// if (error) {
-		// 	console.error("Error getting matching blog in db", error.message);
-		// 	return NextResponse.json({
-		// 		status: 500,
-		// 		statusText: "Error getting matching blog in db",
-		// 		error: error.message,
-		// 	});
-		// }
+		if (error) {
+			console.error("Error getting matching blog in db", error.message);
+			return NextResponse.json({
+				status: 500,
+				statusText: "Error getting matching blog in db",
+				error: error.message,
+			});
+		}
 
 		console.log("Successfully fetched blog from db");
 
